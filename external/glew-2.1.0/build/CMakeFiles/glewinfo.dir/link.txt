@@ -1,0 +1,1 @@
+/usr/bin/cc  -O3 -DNDEBUG   CMakeFiles/glewinfo.dir/home/fox/Desktop/glew-2.1.0/src/glewinfo.c.o  -o bin/glewinfo -Wl,-rpath,/home/fox/Desktop/glew-2.1.0/build/lib: -rdynamic lib/libGLEW.so.2.1.0 -lSM -lICE -lX11 -lXext -lGLU -lGL 
