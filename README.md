@@ -2,7 +2,7 @@
 
 TODO
 - add opengl libs
-
+- make linking/compile script
 
 
 
