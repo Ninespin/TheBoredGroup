@@ -1,6 +1,6 @@
-prefix=/usr/local
+prefix=/usr
 exec_prefix=${prefix}
-libdir=/usr/local/lib
+libdir=/usr/lib64
 includedir=${prefix}/include
 
 Name: glew
