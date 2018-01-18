@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/fox/TheBoredGroup/external/glfw-3.2.1/deps/getopt.c
+/home/Komodo/Developer/TheBoredGroup/external/glfw-3.2.1/deps/getopt.c
 getopt.h
-/home/fox/TheBoredGroup/external/glfw-3.2.1/deps/getopt.h
+/home/Komodo/Developer/TheBoredGroup/external/glfw-3.2.1/deps/getopt.h
 stddef.h
 -
 string.h
 -
 
-/home/fox/TheBoredGroup/external/glfw-3.2.1/deps/getopt.h
+/home/Komodo/Developer/TheBoredGroup/external/glfw-3.2.1/deps/getopt.h
 
-/home/fox/TheBoredGroup/external/glfw-3.2.1/deps/glad.c
+/home/Komodo/Developer/TheBoredGroup/external/glfw-3.2.1/deps/glad.c
 stdio.h
 -
 stdlib.h
@@ -26,7 +26,7 @@ string.h
 glad/glad.h
 -
 
-/home/fox/TheBoredGroup/external/glfw-3.2.1/tests/msaa.c
+/home/Komodo/Developer/TheBoredGroup/external/glfw-3.2.1/tests/msaa.c
 glad/glad.h
 -
 GLFW/glfw3.h
@@ -36,7 +36,7 @@ stdio.h
 stdlib.h
 -
 getopt.h
-/home/fox/TheBoredGroup/external/glfw-3.2.1/tests/getopt.h
+/home/Komodo/Developer/TheBoredGroup/external/glfw-3.2.1/tests/getopt.h
 
 deps/KHR/khrplatform.h
 stdint.h

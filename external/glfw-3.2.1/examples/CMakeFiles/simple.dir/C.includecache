@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/fox/TheBoredGroup/external/glfw-3.2.1/deps/glad.c
+/home/Komodo/Developer/TheBoredGroup/external/glfw-3.2.1/deps/glad.c
 stdio.h
 -
 stdlib.h
@@ -16,13 +16,13 @@ string.h
 glad/glad.h
 -
 
-/home/fox/TheBoredGroup/external/glfw-3.2.1/examples/simple.c
+/home/Komodo/Developer/TheBoredGroup/external/glfw-3.2.1/examples/simple.c
 glad/glad.h
 -
 GLFW/glfw3.h
 -
 linmath.h
-/home/fox/TheBoredGroup/external/glfw-3.2.1/examples/linmath.h
+/home/Komodo/Developer/TheBoredGroup/external/glfw-3.2.1/examples/linmath.h
 stdlib.h
 -
 stdio.h

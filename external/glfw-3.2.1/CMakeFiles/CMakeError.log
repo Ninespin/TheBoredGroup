@@ -1,24 +1,22 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/fox/TheBoredGroup/external/glfw-3.2.1/CMakeFiles/CMakeTmp
+Change Dir: /home/Komodo/Developer/TheBoredGroup/external/glfw-3.2.1/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_acb30/fast"
-/usr/bin/make -f CMakeFiles/cmTC_acb30.dir/build.make CMakeFiles/cmTC_acb30.dir/build
-make[1]: Entering directory '/home/fox/TheBoredGroup/external/glfw-3.2.1/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_acb30.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_acb30.dir/CheckSymbolExists.c.o   -c /home/fox/TheBoredGroup/external/glfw-3.2.1/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_acb30
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_acb30.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_acb30.dir/CheckSymbolExists.c.o  -o cmTC_acb30 -rdynamic 
-CMakeFiles/cmTC_acb30.dir/CheckSymbolExists.c.o: In function `main':
-CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+Run Build Command:"/usr/bin/gmake" "cmTC_209e8/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_209e8.dir/build.make CMakeFiles/cmTC_209e8.dir/build
+gmake[1]: Entering directory '/home/Komodo/Developer/TheBoredGroup/external/glfw-3.2.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_209e8.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_209e8.dir/CheckSymbolExists.c.o   -c /home/Komodo/Developer/TheBoredGroup/external/glfw-3.2.1/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_209e8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_209e8.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_209e8.dir/CheckSymbolExists.c.o  -o cmTC_209e8 
+CMakeFiles/cmTC_209e8.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_acb30.dir/build.make:97: recipe for target 'cmTC_acb30' failed
-make[1]: *** [cmTC_acb30] Error 1
-make[1]: Leaving directory '/home/fox/TheBoredGroup/external/glfw-3.2.1/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_acb30/fast' failed
-make: *** [cmTC_acb30/fast] Error 2
+gmake[1]: *** [CMakeFiles/cmTC_209e8.dir/build.make:98: cmTC_209e8] Error 1
+gmake[1]: Leaving directory '/home/Komodo/Developer/TheBoredGroup/external/glfw-3.2.1/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:126: cmTC_209e8/fast] Error 2
 
-File /home/fox/TheBoredGroup/external/glfw-3.2.1/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/Komodo/Developer/TheBoredGroup/external/glfw-3.2.1/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,22 +32,20 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/fox/TheBoredGroup/external/glfw-3.2.1/CMakeFiles/CMakeTmp
+Change Dir: /home/Komodo/Developer/TheBoredGroup/external/glfw-3.2.1/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_81bea/fast"
-/usr/bin/make -f CMakeFiles/cmTC_81bea.dir/build.make CMakeFiles/cmTC_81bea.dir/build
-make[1]: Entering directory '/home/fox/TheBoredGroup/external/glfw-3.2.1/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_81bea.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_81bea.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.7/Modules/CheckFunctionExists.c
-Linking C executable cmTC_81bea
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_81bea.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_81bea.dir/CheckFunctionExists.c.o  -o cmTC_81bea -rdynamic -lpthreads 
+Run Build Command:"/usr/bin/gmake" "cmTC_71826/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_71826.dir/build.make CMakeFiles/cmTC_71826.dir/build
+gmake[1]: Entering directory '/home/Komodo/Developer/TheBoredGroup/external/glfw-3.2.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_71826.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_71826.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_71826
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_71826.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_71826.dir/CheckFunctionExists.c.o  -o cmTC_71826 -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_81bea.dir/build.make:97: recipe for target 'cmTC_81bea' failed
-make[1]: *** [cmTC_81bea] Error 1
-make[1]: Leaving directory '/home/fox/TheBoredGroup/external/glfw-3.2.1/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_81bea/fast' failed
-make: *** [cmTC_81bea/fast] Error 2
+gmake[1]: *** [CMakeFiles/cmTC_71826.dir/build.make:98: cmTC_71826] Error 1
+gmake[1]: Leaving directory '/home/Komodo/Developer/TheBoredGroup/external/glfw-3.2.1/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:126: cmTC_71826/fast] Error 2
 
 

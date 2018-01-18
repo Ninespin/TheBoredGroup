@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "/home/fox/TheBoredGroup/external/glfw-3.2.1/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: \"/home/fox/TheBoredGroup/external/glfw-3.2.1/install_manifest.txt\"")
+if (NOT EXISTS "/home/Komodo/Developer/TheBoredGroup/external/glfw-3.2.1/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: \"/home/Komodo/Developer/TheBoredGroup/external/glfw-3.2.1/install_manifest.txt\"")
 endif()
 
-file(READ "/home/fox/TheBoredGroup/external/glfw-3.2.1/install_manifest.txt" files)
+file(READ "/home/Komodo/Developer/TheBoredGroup/external/glfw-3.2.1/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})
