@@ -35,3 +35,7 @@ build/*
 *.out
 *.app
 
+# Vim
+*~
+*.swp
+*.swo
