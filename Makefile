@@ -1,25 +1,29 @@
 CC = gcc
 CXX = g++
 
-INCLUDES = -I$(glfw_inc) -I$(glew_inc) -I$(glm) 
-LIBRARIES = -L$(glfw_lib) -L$(glew_lib) 
+CURRENT_DIR = $(shell pwd)
+PREFIX = /usr
 
-glfw = ./external/glfw-3.2.1
+
+INCLUDES = -I$(glfw_inc) -I$(glew_inc) -I$(glm)
+LIBRARIES = -L$(glfw_lib) -L$(glew_lib)
+
+glfw = $(CURRENT_DIR)/external/glfw-3.2.1
 glfw_inc = $(glfw)/include
 glfw_lib = $(glfw)/build
 
-glew = ./external/glew-2.1.0
+glew = $(CURRENT_DIR)/external/glew-2.1.0
 glew_inc = $(glew)/include
 glew_lib = $(glew)/build/lib
 
-glm = ./external/glm
+glm = $(CURRENT_DIR)/external/glm
 
 CFLAGS = -Wall -ggdb -O3 $(INCLUDES)
 CXXFLAGS = -Wall -ggdb -O3 $(INCLUDES)
-LDFLAGS = $(LIBRARIES) $(x_lib) $(gl_lib) -lm -lpthread -lrt -ldl
+LDFLAGS = $(LIBRARIES)  $(gl_lib) $(x_lib) -lm -lpthread -lrt -ldl
 
-x_lib = -lXi -lXinerama -lX11 -lXxf86vm -lXrandr -lXcursor
-gl_lib = -lglfw3 -lGL -lGLU -lGLEW
+x_lib = -lX11 -lXrandr -lXi -lXinerama -lXxf86vm -lXcursor
+gl_lib = -lGL -lGLU -lGLEW -lglfw3
 
 VPATH = source
 
@@ -28,11 +32,22 @@ cpp_files = main.cpp
 objects = $(cpp_files:.cpp=.o) main.o
 headers =
 
+
 all: $(TARGET)
 
 $(TARGET): $(objects)
 		$(CXX) -o $@ $^ $(LDFLAGS)
 
+$(alib): $(obj)
+	$(AR) rsc $@ $^
+
 .PHONY : clean
 clean :
 		-rm $(TARGET) $(objects)
+
+.PHONY: install
+install:
+	#mkdir -p $(DESTDIR)$(PREFIX)/lib
+	#mkdir -p $(DESTDIR)$(PREFIX)/include
+	cp -r $(glew_lib)/* $(DESTDIR)$(PREFIX)/lib
+	cp -r $(glew_inc)/* $(DESTDIR)$(PREFIX)/include
