@@ -5,6 +5,8 @@
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 
+#include "Bore.h"
+
 enum class RETURN_CODE: int{
 	RETURN_OK = 0,
 	RETURN_ERROR
@@ -19,8 +21,8 @@ int main(int argc, char** argv){
 	}
 
 	glfwWindowHint(GLFW_SAMPLES, 4); // enable 4x antialiasing
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);	// use opengl 4.5
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);	// use opengl 4.5
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);	// use opengl 3.3
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);	// use opengl 3.3
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // include only the newer opengl pipeline
 
@@ -42,9 +44,20 @@ int main(int argc, char** argv){
 		return (int)RETURN_CODE::RETURN_ERROR;
 	}
 
+
+
+	Bore::Bore b;
+
+
 	fprintf(stdout, "Main loop\n");
 	glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
+	glClearColor(0.3f, 0.33f, 0.37f, 1.0f);
 	do{
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+		b.Update();
+		b.Render();
+
 		glfwSwapBuffers(window); // copy the main render buffer to the screen (aka show frame)
 		glfwPollEvents(); // process glfw events
 	}while(glfwGetKey(window, GLFW_KEY_ESCAPE) != GLFW_PRESS && glfwWindowShouldClose(window) == 0); // stop upon ESC pressed or something raised the windowShouldClose flag
