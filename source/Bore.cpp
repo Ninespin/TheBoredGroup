@@ -13,11 +13,11 @@ namespace Bore{
     }
 
     void Bore::Render(){
-        fprintf(stdout, "Render.\n");
+        this->renderer.Render();
     }
 
     void Bore::Update(){
-        fprintf(stdout, "Update.\n");
+        this->updater.Update();
     }
 
 }

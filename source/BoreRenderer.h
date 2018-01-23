@@ -1,4 +1,5 @@
 #pragma once
+#include <stdio.h>
 
 namespace Bore{
     // Base renderer class
@@ -6,5 +7,6 @@ namespace Bore{
     public:
         BoreRenderer();
         ~BoreRenderer();
+        void Render();
     };
 }

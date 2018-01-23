@@ -1,5 +1,5 @@
 #pragma once
-
+#include <stdio.h>
 
 namespace Bore{
     // Base updater class
@@ -7,6 +7,6 @@ namespace Bore{
     public:
         BoreUpdater();
         ~BoreUpdater();
-
+        void Update();
     };
 }

@@ -6,4 +6,10 @@ namespace Bore{
     BoreRenderer::~BoreRenderer(){
 
     }
+
+    // main exposed render method
+    //
+    void BoreRenderer::Render(){
+        fprintf(stdout, "Render.\n");
+    }
 }
