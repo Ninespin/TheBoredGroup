@@ -11,6 +11,6 @@ namespace Bore{
     // main exposed update method
     //
     void BoreUpdater::Update(){
-        fprintf(stdout, "Update.\n");
+        //fprintf(stdout, "Update.\n");
     }
 }
