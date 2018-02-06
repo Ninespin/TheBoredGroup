@@ -9,5 +9,6 @@ namespace Scene{
     public:
         Scene(std::string name = "");
         ~Scene();
+        std::string getName();
     };
 };

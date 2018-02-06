@@ -63,5 +63,8 @@ int main(int argc, char** argv){
 	}while(glfwGetKey(window, GLFW_KEY_ESCAPE) != GLFW_PRESS && glfwWindowShouldClose(window) == 0); // stop upon ESC pressed or something raised the windowShouldClose flag
 	fprintf(stdout, "Main loop OVER\n");
 
+
+	glfwDestroyWindow(window);
+	glfwTerminate();
 	return (int)RETURN_CODE::RETURN_OK;
 }

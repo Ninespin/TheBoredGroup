@@ -1,5 +1,6 @@
 #pragma once
-#include <stdio.h>
+#include <iostream>
+#include "Scene.h"
 
 namespace Bore{
     // Base updater class
@@ -7,6 +8,6 @@ namespace Bore{
     public:
         BoreUpdater();
         ~BoreUpdater();
-        void Update();
+        void Update(Scene::Scene* scene);
     };
 }

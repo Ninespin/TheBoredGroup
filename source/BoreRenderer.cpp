@@ -9,6 +9,7 @@ namespace Bore{
 
     // main exposed render method
     //
-    void BoreRenderer::Render(){
-        //fprintf(stdout, "Render.\n");
+    void BoreRenderer::Render(Scene::Scene* scene){
+        std::cout << "Rendering " << scene->getName() << std::endl;
     }
+}

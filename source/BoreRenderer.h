@@ -1,5 +1,6 @@
 #pragma once
-#include <stdio.h>
+#include <iostream>
+#include "Scene.h"
 
 namespace Bore{
     // Base renderer class
@@ -7,6 +8,6 @@ namespace Bore{
     public:
         BoreRenderer();
         ~BoreRenderer();
-        void Render();
+        void Render(Scene::Scene* scene);
     };
 }

@@ -10,7 +10,7 @@ namespace Bore{
 
     // main exposed update method
     //
-    void BoreUpdater::Update(){
-        //fprintf(stdout, "Update.\n");
+    void BoreUpdater::Update(Scene::Scene* scene){
+        std::cout << "Updating " << scene->getName() << std::endl;
     }
 }

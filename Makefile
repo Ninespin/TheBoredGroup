@@ -28,7 +28,7 @@ gl_lib = -lGL -lGLU -lGLEW -lglfw3
 VPATH = source
 
 TARGET = main
-cpp_files = $(shell find ./*.cpp -printf "%f ")#main.cpp Bore.cpp BoreRenderer.cpp BoreUpdater.cpp
+cpp_files = $(shell find . -path ./external -prune -o -type f -name "*.cpp" -printf "%f ")#main.cpp Bore.cpp BoreRenderer.cpp BoreUpdater.cpp
 objects = $(cpp_files:.cpp=.o) main.o Bore.o BoreRenderer.o BoreUpdater.o
 headers =
 
@@ -36,6 +36,7 @@ headers =
 all: $(TARGET)
 
 $(TARGET): $(objects)
+		rm -f $(TARGET)
 		$(CXX) -o $@ $^ $(LDFLAGS)
 
 $(alib): $(obj)

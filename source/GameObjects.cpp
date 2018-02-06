@@ -3,7 +3,7 @@
 namespace GameObjects{
 
     GameObject::GameObject(std::string name)
-        : this->name(name)
+        : name(name)
     {
     }
     GameObject::~GameObject(){
