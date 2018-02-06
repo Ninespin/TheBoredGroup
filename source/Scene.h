@@ -10,5 +10,7 @@ namespace Scene{
         Scene(std::string name = "");
         ~Scene();
         std::string getName();
+        GameObjects::GameObject* getGameObjectByName(std::string name);
+        void addGameObject(GameObjects::GameObject& object );
     };
 };

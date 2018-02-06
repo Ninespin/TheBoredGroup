@@ -47,7 +47,9 @@ int main(int argc, char** argv){
 
 
 	Bore::Bore b;
-
+	Scene::Scene s = Scene::Scene("default");
+	b.addScene(s);
+	b.setCurrentScene("default");
 
 	fprintf(stdout, "Main loop\n");
 	glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);

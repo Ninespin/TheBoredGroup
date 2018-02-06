@@ -20,6 +20,8 @@ namespace Bore{
         void Render();
         void Update();
         Scene::Scene* getCurrentScene();
+        void setCurrentScene(std::string name);
+        void addScene(Scene::Scene& scene);
     };
 
 

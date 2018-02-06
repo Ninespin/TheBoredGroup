@@ -5,9 +5,7 @@ namespace Bore{
         : updater()
         , renderer()
     {
-        
-        this->scenes["default"] = Scene::Scene("default");
-        this->currentScene = &this->scenes["default"];
+
     }
 
     Bore::~Bore(){
@@ -25,5 +23,12 @@ namespace Bore{
     Scene::Scene* Bore::getCurrentScene(){
         return this->currentScene;
     }
+    void Bore::setCurrentScene(std::string name){
+        this->currentScene = &this->scenes[name];
+    }
+    void Bore::addScene(Scene::Scene& scene){
+        this->scenes[scene.getName()] = scene;
+    }
+
 
 }
