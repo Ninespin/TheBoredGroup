@@ -11,6 +11,6 @@ namespace Bore{
     // main exposed update method
     //
     void BoreUpdater::Update(Scene::Scene* scene){
-        std::cout << "Updating " << scene->getName() << std::endl;
+        //std::cout << "Updating " << scene->getName() << std::endl;
     }
 }

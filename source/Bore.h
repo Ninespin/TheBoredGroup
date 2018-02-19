@@ -1,5 +1,6 @@
 #pragma once
 #include <map>
+#include <memory>
 #include <string>
 #include "BoreRenderer.h"
 #include "BoreUpdater.h"
@@ -12,16 +13,16 @@ namespace Bore{
     class Bore{
         BoreUpdater updater;
         BoreRenderer renderer;
-        std::map<std::string, Scene::Scene> scenes;
-        Scene::Scene* currentScene;
+        std::map<std::string, std::shared_ptr<Scene::Scene>> scenes;
+        std::shared_ptr<Scene::Scene> currentScene;
     public:
         Bore();
         ~Bore();
         void Render();
         void Update();
-        Scene::Scene* getCurrentScene();
+        std::shared_ptr<Scene::Scene> getCurrentScene();
         void setCurrentScene(std::string name);
-        void addScene(Scene::Scene& scene);
+        void addScene(std::shared_ptr<Scene::Scene> scene);
     };
 
 
