@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
-#include <vector>
+#include <map>
+#include <memory>
+#include "Component.h"
 #include "RenderProperties.h"
 
 namespace GameObjects{
@@ -8,14 +10,13 @@ namespace GameObjects{
     public:
         std::string name;
         GameObject* parent;
+        std::map<std::string, std::shared_ptr<Component>> components;
     public:
         GameObject(std::string name = "DefaultGameObject");
-        ~GameObject();
+        virtual ~GameObject();
     };
 
     class RenderableObject:public GameObject{
-    public:
-        std::vector<RenderProperties::RenderProperties> renderProperties;
     public:
         RenderableObject(std::string name="DefaultRenderable");
         ~RenderableObject();

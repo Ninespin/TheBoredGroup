@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include "Scene.h"
+#include "Component.h"
 
 namespace Bore{
     // Base renderer class

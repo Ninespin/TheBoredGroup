@@ -21,10 +21,10 @@ namespace Bore{
     }
 
     std::shared_ptr<Scene::Scene> Bore::getCurrentScene(){
-        return this->currentScene;
+        return *this->currentScene;
     }
     void Bore::setCurrentScene(std::string name){
-        this->currentScene = this->scenes[name];
+        this->currentScene = &this->scenes[name];
     }
     void Bore::addScene(std::shared_ptr<Scene::Scene> scene){
         this->scenes[scene->getName()] = scene;

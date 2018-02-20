@@ -22,10 +22,9 @@ namespace Scene{
         return &this->objects;
     }
 
-    void Scene::addGameObject(std::shared_ptr<GameObjects::GameObject> object){
-        this->objects.insert(
-            std::pair<std::string, std::shared_ptr<GameObjects::GameObject>>(object->name, object)
-        );
+    void Scene::addGameObject(std::shared_ptr<GameObjects::GameObject>& object){
+        this->objects[object->name] = object;
+
     }
 
 };

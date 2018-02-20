@@ -8,5 +8,12 @@ namespace RenderProperties{
     {
     }
 
+    int RenderProperties::run(){
 
+        return 0;
+    }
+
+    int RenderProperties::init(){
+        return 0;
+    }
 }

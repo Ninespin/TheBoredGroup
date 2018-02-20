@@ -14,7 +14,7 @@ namespace Bore{
         BoreUpdater updater;
         BoreRenderer renderer;
         std::map<std::string, std::shared_ptr<Scene::Scene>> scenes;
-        std::shared_ptr<Scene::Scene> currentScene;
+        std::shared_ptr<Scene::Scene>* currentScene;
     public:
         Bore();
         ~Bore();

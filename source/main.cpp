@@ -57,8 +57,13 @@ int main(int argc, char** argv){
 
 
 	Bore::Bore b;
-	std::shared_ptr<Scene::Scene> s = std::shared_ptr<Scene::Scene>(new Scene::Scene("default"));
-	s->addGameObject(std::shared_ptr<GameObjects::RenderableObject>(new GameObjects::RenderableObject("object 1")));
+	std::shared_ptr<Scene::Scene> s(new Scene::Scene("default"));
+	std::shared_ptr<GameObjects::GameObject> o2 (new GameObjects::RenderableObject("object 2"));
+	std::shared_ptr<GameObjects::GameObject> o1 (new GameObjects::GameObject("object 1"));
+
+	s->addGameObject(o1);
+	s->addGameObject(o2);
+	
 	b.addScene(s);
 	b.setCurrentScene("default");
 
