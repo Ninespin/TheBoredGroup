@@ -7,6 +7,7 @@
 #include <glm/glm.hpp>
 
 #include "Bore.h"
+#include "PrintNameComponent.h"
 
 
 enum class RETURN_CODE: int{
@@ -60,10 +61,12 @@ int main(int argc, char** argv){
 	std::shared_ptr<Scene::Scene> s(new Scene::Scene("default"));
 	std::shared_ptr<GameObjects::GameObject> o2 (new GameObjects::RenderableObject("object 2"));
 	std::shared_ptr<GameObjects::GameObject> o1 (new GameObjects::GameObject("object 1"));
-
+	std::shared_ptr<Component> pname (new PrintNameComponent());
+	o1->components["PrintNameComponent"] = pname;
+	o2->components["PrintNameComponent"] = pname;
 	s->addGameObject(o1);
 	s->addGameObject(o2);
-	
+
 	b.addScene(s);
 	b.setCurrentScene("default");
 

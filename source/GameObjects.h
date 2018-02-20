@@ -5,6 +5,8 @@
 #include "Component.h"
 #include "RenderProperties.h"
 
+class Component;
+
 namespace GameObjects{
     class GameObject{
     public:

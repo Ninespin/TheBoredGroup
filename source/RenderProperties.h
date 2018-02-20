@@ -3,10 +3,15 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
+#include "GameObjects.h"
 #include "Component.h"
 
+namespace GameObjects{
+    class GameObject;
+};
+
 namespace RenderProperties{
-    class RenderProperties:public Component{
+    class RenderProperties: public Component{
     public:
         std::vector<float> vertex;
         std::vector<float> colors;
@@ -18,8 +23,8 @@ namespace RenderProperties{
     public:
         RenderProperties();
         ~RenderProperties();
-        int run() override;
-        int init() override;
+        int run(GameObjects::GameObject* parent) override;
+        int init(GameObjects::GameObject* parent) override;
     };
 
 }

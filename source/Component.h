@@ -1,5 +1,10 @@
 #pragma once
 #include <string>
+#include "GameObjects.h"
+
+namespace GameObjects{
+    class GameObject;
+};
 
 class Component{
 public:
@@ -7,6 +12,6 @@ public:
 public:
     Component();
     ~Component();
-    virtual int run() = 0;
-    virtual int init() = 0;
+    virtual int run(GameObjects::GameObject* parent) = 0;
+    virtual int init(GameObjects::GameObject* parent) = 0;
 };
